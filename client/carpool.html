@@ -1,0 +1,56 @@
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>BITS Pilani, Goa</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BITS Pilani</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Car pool</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Carpool</a></li>
+          <li><a href="#">Buy/Sell</a></li>
+          <li><a href="#">Events</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      
+      <div class="row center">
+        {{>main}}
+      </div>
+  </div>
+    </div>
+  </body>
+
+
+
+
+<template name = "addtrip">
+        <div class="col s12 ">
+          <a class="waves-effect waves-light btn" id="addtrip">Add Trip</a>
+        </div>
+
+</template>
+
+
+<template name="tripformtail">
+</template>
+<template name="savedresponse">
+  {{#if updated}}
+      <h5 class="header center teal-text">Your trip details have been updated.</h5>
+  {{else}}
+      <h5 class="header center teal-text">Your trip details have been saved.</h5>
+    {{/if}}
+      {{>table}}
+</template>

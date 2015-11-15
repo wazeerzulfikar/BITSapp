@@ -1,0 +1,47 @@
+<template name="tripform">
+  {{#if c}}
+    <h5 class="header center teal-text">Destination: {{c.place.title}}</h5>
+  {{else}}
+    <h5 class="header center teal-text">Destination: {{dispdest}}</h5>
+  {{/if}}
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate" value="{{c.name}}">
+          {{#unless c}}
+            <label for="name">Name</label>
+          {{/unless}}
+        </div>
+        <div class="input-field col s12" >
+          <input id="phone" type="text" class="validate" value="{{c.phone}}">
+          {{#unless c}}
+            <label for="phone">Phone Number</label>
+          {{/unless}}
+        </div>
+        <div class="input-field col s12" >
+              <input type="date" id="thedate" class = "datepicker" placeholder = "Date of Trip" value="{{c.date}}">
+                {{>tripformtail}}
+        </div>
+        <div class="input-field col s12" >
+          <input id="time" type="text" class="validate" value="{{c.time}}">
+          {{#unless c}}
+            <label for="time">Time of Trip</label>
+          {{/unless}}
+        </div>
+        {{#if error}}
+            <p class="header center red-text">Form not complete, Please enter the missing details.</p>
+          {{/if}}
+        {{#if c}}
+        <div class="col s12">
+             <a class="waves-effect waves-light btn" id="save">Update</a>
+      </div>
+      {{else}}
+        <div class="col s12">
+             <a class="waves-effect waves-light btn" id="save">Save</a>
+      </div>
+      {{/if}}
+      </div>
+    </form>
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<template name = "homepage">
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Join Trip</a>
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+    {{#each list}}
+      <li><a href="" class="chooseMe">{{title}}</a></li>
+    {{/each}}
+
+</ul>
+<br/>
+<br/>
+<div class="col s12 ">
+  <a class="waves-effect waves-light btn" id="edittrip">Edit Trip</a>
+</div>
+</template>

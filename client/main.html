@@ -1,0 +1,31 @@
+<template name="main">
+<i class="waves-effect waves-light btn material-icons left" id = "home">home</i>
+<br>
+<br>
+<h3 class="header center teal-text">Car Pool</h3>
+<br>
+{{#if savedform}}
+    {{>savedresponse}}
+{{else}}
+    {{#if cancelled}}
+      <h5 class = "header center teal-text">Your trip has been cancelled.</h5>
+    {{else}}
+        {{#if editform}}
+          {{>edit}}
+        {{else}}
+
+                {{#if form}}
+                    {{>tripform}}
+                {{else}}
+
+                    {{#with disp}}
+                      {{>table this}}
+                      {{>addtrip}}
+                    {{else}}
+                          {{>homepage}}
+                  {{/with}}
+            {{/if}}
+        {{/if}}
+    {{/if}}
+{{/if}}
+</template>

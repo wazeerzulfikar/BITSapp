@@ -1,0 +1,20 @@
+<template name = "edit">
+  <div class="input-field col s6">
+    <input id="password" type="text" class="validate">
+    <label for="password">Phone No.</label>
+  </div>
+  <div class="row">
+    <div class="col s12 ">
+      <a class="waves-effect waves-light btn" id="submit">Submit</a>
+    </div>
+  </div>
+  {{#if submit}}
+    {{>table}}
+  {{/if}}
+  {{#if editor}}
+    {{>tripform}}
+    <div class="col s12">
+      <a class="waves-effect waves-light btn" id="cancel">Cancel Trip</a>
+    </div>
+  {{/if}}
+</template>
